@@ -17,17 +17,20 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { ModalComponent } from './components/modal/modal.component';
+import { NzModalModule } from 'ng-zorro-antd/modal';
 registerLocaleData(en);
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TableComponent
+    TableComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, NzDividerModule, NzButtonModule, NzTableModule, FormsModule, HttpClientModule, BrowserAnimationsModule, IconsProviderModule, NzLayoutModule, NzMenuModule
+    AppRoutingModule, NzModalModule, NzDividerModule, NzButtonModule, NzTableModule, FormsModule, HttpClientModule, BrowserAnimationsModule, IconsProviderModule, NzLayoutModule, NzMenuModule
   ],
   exports: [NzTableModule],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
