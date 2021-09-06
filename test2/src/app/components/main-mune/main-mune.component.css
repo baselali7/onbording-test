@@ -1,0 +1,9 @@
+.wrapper {
+    /* width: 240px; */
+    background-color: black;
+    height: 100vh;
+  }
+
+  button {
+    margin-bottom: 12px;
+  }

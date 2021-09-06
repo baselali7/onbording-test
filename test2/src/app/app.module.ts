@@ -19,6 +19,14 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { ModalComponent } from './components/modal/modal.component';
 import { NzModalModule } from 'ng-zorro-antd/modal';
+import { MainMuneComponent } from './components/main-mune/main-mune.component';
+import { PageHeaderComponent } from './components/page-header/page-header.component';
+import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
+import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
+import { NzTagModule } from 'ng-zorro-antd/tag';
+
+import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 registerLocaleData(en);
 
 
@@ -26,11 +34,13 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     TableComponent,
-    ModalComponent
+    ModalComponent,
+    MainMuneComponent,
+    PageHeaderComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, NzModalModule, NzDividerModule, NzButtonModule, NzTableModule, FormsModule, HttpClientModule, BrowserAnimationsModule, IconsProviderModule, NzLayoutModule, NzMenuModule
+    AppRoutingModule, NzTagModule, NzBreadCrumbModule, NzDropDownModule, NzToolTipModule, NzPageHeaderModule, NzModalModule, NzDividerModule, NzButtonModule, NzTableModule, FormsModule, HttpClientModule, BrowserAnimationsModule, IconsProviderModule, NzLayoutModule, NzMenuModule
   ],
   exports: [NzTableModule],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
