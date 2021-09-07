@@ -1,31 +1,44 @@
-<div class="wrapper bg-dark  ">
-    <button nz-button nzType="primary" (click)="toggleCollapsed()">
-        <i nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
-    </button>
-    <ul nz-menu nzMode="inline" nzTheme="dark" [nzInlineCollapsed]="isCollapsed">
-        <li nz-menu-item nz-tooltip nzTooltipPlacement="right" [nzTooltipTitle]="isCollapsed ? 'Navigation One' : ''"
-            nzSelected>
-            <i nz-icon nzType="mail"></i>
-            <span>category1</span>
-        </li>
-        <li nz-submenu nzTitle="category 2" nzIcon="appstore">
-            <ul>
-                <li nz-menu-item>product 1 </li>
-                <li nz-menu-item>product 2 </li>
-                <li nz-submenu nzTitle="product 3 ">
-                    <ul>
-                        <li nz-menu-item>product 3 v1</li>
-                        <li nz-menu-item>product 3 v2</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li nz-submenu nzTitle="category 3" nzIcon="setting">
-            <ul>
-                <li nz-menu-item>product 1 </li>
-                <li nz-menu-item>product 2 </li>
-                <li nz-menu-item>product 3 </li>
-            </ul>
-        </li>
-    </ul>
+<div class="d-flex">
+    <div class="wrapper bg-dark  ">
+        <button nz-button nzType="primary" (click)="toggleCollapsed()">
+            <i nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
+        </button>
+        <ul nz-menu nzMode="inline" nzTheme="dark" [nzInlineCollapsed]="isCollapsed">
+            <li nz-menu-item nz-tooltip nzTooltipPlacement="right"
+                [nzTooltipTitle]="isCollapsed ? 'Navigation One' : ''" nzSelected>
+                <i nz-icon nzType="mail"></i>
+                <span>category1</span>
+            </li>
+            <li nz-submenu nzTitle="category 2" nzIcon="appstore">
+                <ul>
+                    <li nz-menu-item (click)="basel()">product 1 </li>
+                    <li nz-menu-item>product 2 </li>
+                    <li nz-submenu nzTitle="product 3 ">
+                        <ul>
+                            <li nz-menu-item>product 3 v1</li>
+                            <li nz-menu-item>product 3 v2</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="category 3" nzIcon="setting">
+                <ul>
+                    <li nz-menu-item>product 1 </li>
+                    <li nz-menu-item>product 2 </li>
+                    <li nz-menu-item>product 3 </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+    <div>
+        <app-page-header></app-page-header>
+        <app-table class="w-100 p-5" *ngIf="publicSatistic"></app-table>
+        <router-outlet></router-outlet>
+        <!-- <app-page-details class="p-5"></app-page-details> -->
+
+    </div>
 </div>

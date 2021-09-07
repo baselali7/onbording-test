@@ -2,6 +2,9 @@
     /* width: 240px; */
     background-color: black;
     height: 100vh;
+    position: sticky;
+    top: 0;
+    bottom: 0;
   }
 
   button {

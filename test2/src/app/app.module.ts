@@ -27,6 +27,10 @@ import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
 import { NzTagModule } from 'ng-zorro-antd/tag';
 
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
+import { PageDetailsComponent } from './components/page-details/page-details.component';
+
+import { NzDescriptionsModule } from 'ng-zorro-antd/descriptions';
+import { NzCarouselModule } from 'ng-zorro-antd/carousel'
 registerLocaleData(en);
 
 
@@ -36,11 +40,12 @@ registerLocaleData(en);
     TableComponent,
     ModalComponent,
     MainMuneComponent,
-    PageHeaderComponent
+    PageHeaderComponent,
+    PageDetailsComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, NzTagModule, NzBreadCrumbModule, NzDropDownModule, NzToolTipModule, NzPageHeaderModule, NzModalModule, NzDividerModule, NzButtonModule, NzTableModule, FormsModule, HttpClientModule, BrowserAnimationsModule, IconsProviderModule, NzLayoutModule, NzMenuModule
+    AppRoutingModule, NzCarouselModule, NzDescriptionsModule, NzTagModule, NzBreadCrumbModule, NzDropDownModule, NzToolTipModule, NzPageHeaderModule, NzModalModule, NzDividerModule, NzButtonModule, NzTableModule, FormsModule, HttpClientModule, BrowserAnimationsModule, IconsProviderModule, NzLayoutModule, NzMenuModule
   ],
   exports: [NzTableModule],
   providers: [{ provide: NZ_I18N, useValue: en_US }],

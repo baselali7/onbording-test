@@ -1,0 +1,50 @@
+<!-- <nz-radio-group [(ngModel)]="size">
+    <label nz-radio nzValue="default">default</label>
+    <label nz-radio nzValue="middle">middle</label>
+    <label nz-radio nzValue="small">small</label>
+</nz-radio-group> -->
+
+<nz-descriptions nzTitle="prduct details" class="px-5" nzBordered [nzSize]="size" style="padding-top:15px;">
+    <nz-descriptions-item nzTitle="Product">Cloud Database</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Billing">Prepaid</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="time">18:00:00</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Amount">$80.00</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Discount">$20.00</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Official">$60.00</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Config Info">
+        Data disk type: MongoDB
+        <br />
+        Database version: 3.4
+        <br />
+        Package: dds.mongo.mid
+        <br />
+        Storage space: 10 GB
+        <br />
+        Replication_factor:3
+        <br />
+        Region: East China 1
+        <br />
+    </nz-descriptions-item>
+    <nz-descriptions-item nzTitle="images  ">
+        <nz-carousel nzAutoPlay>
+            <div nz-carousel-content *ngFor="let index of array">
+                <!-- <h3>{{ index }}</h3> -->
+                <!-- <img src="{{index}}" alt=""> -->
+                <img src="{{index}}" alt="" class="w-100">
+            </div>
+        </nz-carousel>
+    </nz-descriptions-item>
+</nz-descriptions>
+<br />
+<br />
+<nz-descriptions class="px-5" nzTitle="Custom Size" [nzSize]="size">
+    <nz-descriptions-item nzTitle="Product">Cloud Database</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Billing">Prepaid</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Time">18:00:00</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Amount">$80.00</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Discount">$20.00</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Official">$60.00</nz-descriptions-item>
+</nz-descriptions>
+<!-- <ng-template #extraTpl>
+    <button nz-button nzType="primary">Edit</button>
+</ng-template> -->
